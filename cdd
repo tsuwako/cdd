@@ -3,6 +3,9 @@
 
 if [ -z "$CDD_FILE" ]; then
   CDD_FILE=~/.cdd
+  if [ ! -e "$CDD_FILE" ]; then
+    touch "$CDD_FILE"
+  fi
 fi
 export CDD_FILE
 
